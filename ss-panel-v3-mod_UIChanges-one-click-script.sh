@@ -52,6 +52,7 @@ function install_ss_panel_mod_UIm(){
 	echo '*/1 * * * * php -n /home/wwwroot/default/xcat syncnas' >> /var/spool/cron/root
 	/sbin/service crond restart
 	if [ -d "/home/wwwroot/default/" ];then
+	clear
 	echo "ss-panel-v3-mod_UIChanges安装成功~"
 	else
 	echo "安装失败，请格盘重装~"
@@ -150,6 +151,7 @@ if [ "$inputPass" != "$pass" ];then
      echo -e "\033[31m很抱歉,输入错误\033[0m";
      exit 0;
 fi;
+clear
 echo -e "\033[31m#############################################################\033[0m"
 echo -e "\033[32m#欢迎使用一键ss-panel-v3-mod_UIChanges搭建脚本 and 节点添加 #\033[0m"
 echo -e "\033[34m#Blog: http://blog.67cc.cn/                                 #\033[0m"
