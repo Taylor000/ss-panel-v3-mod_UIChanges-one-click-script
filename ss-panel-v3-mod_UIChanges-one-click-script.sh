@@ -131,7 +131,7 @@ function install_RS(){
 PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:~/bin
 export PATH
 ulimit -c 0
-rm -rf ssr*
+rm -rf ss*
 clear
 echo -e "\033[33m=====================================================================\033[0m"
 echo -e "\033[33m                   一键ss-panel-v3-mod_UIChanges搭建脚本                 \033[0m"
@@ -148,7 +148,7 @@ read inputPass
 if [ "$inputPass" != "$pass" ];then
     #网址验证
      echo -e "\033[31m很抱歉,输入错误\033[0m";
-     exit 1;
+     exit 0;
 fi;
 echo -e "\033[31m#############################################################\033[0m"
 echo -e "\033[32m#欢迎使用一键ss-panel-v3-mod_UIChanges搭建脚本 and 节点添加 #\033[0m"
@@ -166,16 +166,16 @@ read num
 if [[ $num == "1" ]]
 then
 install_ss_panel_mod_UIm
-fi;
-if [[ $num == "2" ]]
+elif [[ $num == "2" ]]
 then
 install_node
-fi;
-if [[ $num == "3" ]]
+elif [[ $num == "3" ]]
 then
 install_BBR
-fi;
-if [[ $num == "4" ]]
+elif [[ $num == "4" ]]
 then
 install_RS
+else 
+echo '输入错误';
+exit 0;
 fi;
