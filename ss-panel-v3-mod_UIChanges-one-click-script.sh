@@ -12,7 +12,7 @@ function install_ss_panel_mod_UIm(){
 	cd default
 	rm -rf index.html
 	#克隆项目
-	git clone https://github.com/echo-marisn/ss-panel-v3-mod_Uim.git tmp && mv tmp/.git . && rm -rf tmp && git reset --hard
+	git clone https://github.com/NimaQu/ss-panel-v3-mod_Uim.git tmp && mv tmp/.git . && rm -rf tmp && git reset --hard
 	#复制配置文件
 	cp config/.config.php.example config/.config.php
 	#设置文件权限
